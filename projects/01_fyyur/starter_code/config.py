@@ -15,6 +15,8 @@ DEBUG = True
 
 
 # TODO IMPLEMENT DATABASE URL
+
+Base = declarative_base()
 SQLALCHEMY_DATABASE_URI = 'postgresql://postgresuser:@localhost:5432/test'
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
 Base.metadata.create_all(engine)
