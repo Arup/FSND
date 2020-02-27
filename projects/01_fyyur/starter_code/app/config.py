@@ -18,18 +18,18 @@ DEBUG = True
 
 # TODO IMPLEMENT DATABASE URL
 
-Base = declarative_base()
+# Base = declarative_base()
 SQLALCHEMY_DATABASE_URI = 'postgresql://postgresuser:@localhost:5432/fyyur'
-engine = create_engine(SQLALCHEMY_DATABASE_URI)
-Base.metadata.create_all(engine)
-
-def getconn():
-    c = psycopg2.connect(user='postgresuser', host='localhost', dbname='test')
-    return c
-
-def conection():
-    mypool = pool.QueuePool(getconn, max_overflow=10, pool_size=5)
-    conn = mypool.connect()
-    return conn
+# engine = create_engine(SQLALCHEMY_DATABASE_URI)
+# Base.metadata.create_all(engine)
+#
+# def getconn():
+#     c = psycopg2.connect(user='postgresuser', host='localhost', dbname='test')
+#     return c
+#
+# def conection():
+#     mypool = pool.QueuePool(getconn, max_overflow=10, pool_size=5)
+#     conn = mypool.connect()
+#     return conn
 
 #conxn = conection()
